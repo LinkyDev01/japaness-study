@@ -1002,49 +1002,84 @@ select.form-input {
 
 /* Footer */
 .footer {
-    background: var(--bg-color);
-    padding: 60px 0;
+    background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+    padding: 60px 0 30px;
     border-top: 1px solid var(--border-color);
-    text-align: center;
+}
+
+.footer .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
 .footer-content {
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .footer-logo {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 20px;
     font-family: 'Futura PT', 'Futura', sans-serif;
+    color: var(--accent-color);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 300px;
+    font-size: 12px;
     color: var(--text-secondary);
-    letter-spacing: 1px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.footer-info p {
+    margin: 6px 0;
+    font-weight: 300;
+}
+
+.footer-info p:first-child {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 13px;
+    margin-bottom: 12px;
 }
 
 .footer-links {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
 }
 
 .footer-link {
     font-size: 13px;
     color: var(--text-secondary);
     text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: 300;
+    transition: all 0.3s ease;
+    font-weight: 400;
 }
 
 .footer-link:hover {
-    color: var(--text-primary);
+    color: var(--accent-color);
 }
 
 .footer-copyright {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text-secondary);
-    margin-top: 30px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
     font-weight: 300;
+    opacity: 0.7;
+    text-align: left;
 }
 
 /* Fade-in animation */
@@ -1122,9 +1157,17 @@ select.form-input {
         grid-template-columns: 1fr;
     }
 
-    .footer-links {
+    .footer-content {
         flex-direction: column;
-        gap: 20px;
+        gap: 40px;
+    }
+
+    .footer-links {
+        align-items: flex-start;
+    }
+
+    .footer-copyright {
+        text-align: center;
     }
 
     section {
